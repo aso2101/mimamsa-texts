@@ -53,6 +53,8 @@ if __name__ == "__main__":
                 if ls:
                     language,script = ls[0].split("-")
                     recurse(body.getchildren(),"iso",target)
+                    if target == "devanagari":
+                        body.attrib["{http://www.w3.org/XML/1998/namespace}lang"] = "san-Deva"
                     with open(outfile, "w+") as output:
                         output.write(etree.tostring(source,pretty_print=True,encoding='unicode'))
                 else:

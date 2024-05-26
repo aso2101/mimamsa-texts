@@ -21,22 +21,22 @@
 	<p>This digital text is based on the one originally prepared by Helmut Krasser in 1998 and corrected by Harunaga Isaacson in 1998.</p>
 	<p>Here is the header of the plain-text document on which this TEI file is based:</p>
 	<code>
-	  #(C)1998 Department of Oriental Languages and Cultures, University of Lausanne
-	  #(C)1998 Helmut Krasser 
-	  #
-	  #This file may be freely distributed and used for scholarly purposes.
-	  #Use for commercial purposes is prohibited.
-	  #
-	  #Modified version of this file may be distributed providing the present
-	  #copyright notice is included.
-	  #
-	  # I have corrected some typos, mainly of the ṣt and ṇd type, 
-	  # and some wrong word-divisions, but have not proofread the text.
-	  # Harunaga Isaacson 10/4/1999.
-	  #
-	  #Notes:
-	  #The present e-text is not completely proof-read and as such does not
-	  #have the same standard of reliability as printed versions.
+	  (C)1998 Department of Oriental Languages and Cultures, University of Lausanne
+	  (C)1998 Helmut Krasser 
+	  
+	  This file may be freely distributed and used for scholarly purposes.
+	  Use for commercial purposes is prohibited.
+	  
+	  Modified version of this file may be distributed providing the present
+	  copyright notice is included.
+	  
+	   I have corrected some typos, mainly of the ṣt and ṇd type, 
+	   and some wrong word-divisions, but have not proofread the text.
+	   Harunaga Isaacson 10/4/1999.
+	  
+	  Notes:
+	  The present e-text is not completely proof-read and as such does not
+	  have the same standard of reliability as printed versions.
 
 	  I. pratijñāsūtra (PJS)
 	  II. codanāsūtra (CDS)
@@ -78,17 +78,13 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <p>The text is divided into adhyāyas, pādas, adhikaraṇas, and sūtras. Each is enclosed in a typed &lt;div&gt; element. Each of these elements has a label @n that identifies the number of the unit.</p>
-      <p>The adhikaraṇas have &lt;head&gt; and &lt;trailer&gt; elements.</p>
-      <p>Kumārila’s quotations of Śabara’s commentary are enclosed in &lt;quote&gt; elements.</p>
-      <p>Page breaks of the original edition are marked (the &lt;pb&gt; element precedes the page that bears that number), but line breaks are not.</p>
-      <p>The notes of this digital text are Subbaśāstrī’s unless stated otherwise. They are either discursive textual comments or cross-references. The cross-references are generally contained in a &lt;note&gt; elements with the @type="reference", and the text of the reference is included in a &lt;ref&gt; element whose @cRef attribute contains the reference as a machine-readable string.</p>
+      <p>I have followed the numeration of Krasser’s text. Each section (paricchēda) is given a distinct three-letter abbreviation.</p>
       <refsDecl>
 	<cRefPattern matchPattern="ŚlōVā\.([1-9A-Za-z]+)\.([0-9]+)" replacementPattern="#xpath(//div[@n='$1']/lg[@n='$2'])"/>
       </refsDecl>
     </encodingDesc>
     <revisionDesc>
-      <change when="2024-23-05" who="#AO">
+      <change when="2024-05-26" who="#AO">
 	Initial creation of XML document from plain-text source.
       </change>
     </revisionDesc>
